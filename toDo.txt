@@ -1,0 +1,3 @@
+# read
+1 - [CORS] https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+2 - [JWT] https://www.rfc-editor.org/rfc/rfc7519
