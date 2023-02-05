@@ -56,6 +56,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'portin.urls'
+AUTH_USER_MODEL = 'authentication.User'
 
 TEMPLATES = [
     {
