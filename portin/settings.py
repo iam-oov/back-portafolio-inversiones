@@ -30,7 +30,7 @@ else:
 
 # Application definition
 
-APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,10 +40,11 @@ APPS = [
 ]
 
 CUSTOM_APPS = [
+    'portin.apps.core',
     'portin.apps.authentication'
 ]
 
-INSTALLED_APPS = APPS + CUSTOM_APPS
+INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -130,3 +131,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'portin.apps.core.exceptions.core_exception_handler',
+    'NON_FIELD_ERRORS_KEY': 'error',
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'portin.apps.authentication.backends.JWTAuthentication',
+    ),
+}
