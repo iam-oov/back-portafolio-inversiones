@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('portin.apps.authentication.urls',
          namespace='authentication')),
+    path('api/', include('portin.apps.profiles.urls', namespace='profiles')),
 ]
