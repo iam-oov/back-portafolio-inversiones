@@ -41,7 +41,8 @@ DJANGO_APPS = [
 
 CUSTOM_APPS = [
     'portin.apps.core',
-    'portin.apps.authentication'
+    'portin.apps.authentication',
+    'portin.apps.profiles'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS
